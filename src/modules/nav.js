@@ -1,12 +1,18 @@
+
+
 const navFunc = () => {
 
     const taskClick = document.querySelector('.task-click');
     const todoList = document.querySelector('.todo-list');
     const listDiv = document.querySelector('.tasks');
+    const up = document.querySelector('.up');
+    const down = document.querySelector('.down');
 
-    
+
 
     taskClick.addEventListener('click', () =>{
+        up.classList.toggle('clicked');
+        down.classList.toggle('clicked')
         todoList.classList.toggle('clicked');
     })
 
@@ -19,8 +25,9 @@ const addProject = (list) =>{
     const addBtn = document.querySelector('.add-project');
     
     addBtn.addEventListener('click', () =>{
+
             addBtn.style.cssText = 'display:none';
-            addInput(addBtn.parentElement, addBtn, list)
+            addInput(addBtn.parentElement, addBtn, list);
         } 
         
     )}

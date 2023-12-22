@@ -130,6 +130,31 @@ svg.plus-icon{
     gap: 5px;
 }
 
+.task-div{
+    display: flex;
+}
+
+.svg-drop{
+    width: 25px;
+    height: auto;
+}
+
+.up{
+    display: none;
+}
+
+.down{
+    display: block;
+}
+
+.up.clicked{
+    display: block;
+}
+
+.down.clicked{
+    display: none;
+}
+
 
 
 
