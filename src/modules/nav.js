@@ -1,4 +1,4 @@
-
+import taskDOM from "./createTask";
 
 const navFunc = () => {
 
@@ -68,21 +68,14 @@ const addInput = (originDiv, btn, list) => {
         console.log()
         inputDiv.remove();
         btn.style.cssText = 'display:flex';
-        createListItem(list, addInput.value);
+        taskDOM(list, addInput.value)
+        createListItem(list, addInput.value, 1);
     })
 
 }
 
 
-const createListItem = (list, value) =>{
 
-
-
-    const listItem = document.createElement('li');
-    listItem.textContent = value;
-    list.appendChild(listItem)
-
-}
 
 
 
