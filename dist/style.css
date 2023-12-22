@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url(Metropolis-Thin.otf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.all-grid{
+    font-family: 'CustomFont';
+    height: 100vh;
+    display: grid;
+    grid-template-columns: .7fr 5fr;
+    grid-template-rows: .4fr 5fr;
+}
+
+
+/* TOP */
+.top{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbeafe;
+}
+
+
+
+
+
+
+/* LEFT-NAV */
+.left-nav{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 10px 0 0 10px ;
+    gap: 2%;
+    border-right: 2px solid #dbeafe;
+}
+
+
+.todo-list{
+    cursor: pointer;
+    display: none;
+
+}
+
+.todo-list.clicked{
+display: flex;
+flex-direction: column;    
+}
+
+ul li{
+    list-style: none;
+    padding: 3px;
+}
+
+ul li:hover{
+    background-color: #dbeafe;
+    border-radius: 20px;
+
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.add-project{
+    display: flex; 
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+}
+
+svg.plus-icon{
+    width: 20px;
+    height: auto;
+}
+
+.left-nav h1{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn-div{
+    margin-top: 5px;
+    font-size: 1.3rem;
+    display: flex;
+    gap: 5px;
+}
+
+.add-input{
+    
+    display: inline-block;
+    padding: 0 16px 0 12px;
+    width: 80%;
+    line-height: 30px;
+    height: 32px;
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+    background-color: #fff;
+    color: rgb(8, 7, 7);
+    transition: border .1s linear,background-color .1s linear;
+}
+
+.create{
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: #22c55e;
+}
+
+.cancle{
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: #f43f5e;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+
+/* MAIN */
+.main{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+

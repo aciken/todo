@@ -1,1 +1,3 @@
-console.log('a')
+import navFunc from "./modules/nav";
+
+navFunc();
