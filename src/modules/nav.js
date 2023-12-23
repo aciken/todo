@@ -1,6 +1,7 @@
 import {taskDOM} from "./createTask";
 import mainChange from "./mainChange";
 
+
 const navFunc = () => {
 
     const taskClick = document.querySelector('.task-click');

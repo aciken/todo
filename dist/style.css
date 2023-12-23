@@ -162,5 +162,41 @@ svg.plus-icon{
 .main{
     grid-column: 2/3;
     grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.add-task{
+    border: 2px solid #dbeafe;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 7px 0;
+    width: 300px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    transition: .5s;
+}
+
+.add-task:hover{
+    scale: 102%;
+    background-color: #f1f5f9;
+}
+
+.add-task.clicked{
+    display: none;
+}
+
+
+.add-task-icon{
+    display: block;
+    width: 40px;
+    height: auto;
+}
+
+
+
+
+
 
