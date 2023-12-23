@@ -1,4 +1,5 @@
-import taskDOM from "./createTask";
+import {taskDOM} from "./createTask";
+import mainChange from "./mainChange";
 
 const navFunc = () => {
 
@@ -17,6 +18,7 @@ const navFunc = () => {
     })
 
     addProject(listDiv);
+    mainChange();
 
 }
 
@@ -69,7 +71,6 @@ const addInput = (originDiv, btn, list) => {
         inputDiv.remove();
         btn.style.cssText = 'display:flex';
         taskDOM(list, addInput.value)
-        createListItem(list, addInput.value, 1);
     })
 
 }
