@@ -1,7 +1,8 @@
 import { taskArray } from "./createTask";
 
-const addTask = () =>{
+const makeTask = (number) =>{
 
+    console.log(number)
     const addTask = document.querySelector('.add-task');
     const main = document.querySelector('.main');
     const addPart = document.querySelector('.add-part');
@@ -9,6 +10,10 @@ const addTask = () =>{
     
 
     addTask.addEventListener('click', () =>{
+
+        if(addPart.childElementCount < 2){
+            console.log(number[number.length-1])
+        
 
         addTask.classList.toggle('clicked');
 
@@ -32,9 +37,17 @@ const addTask = () =>{
         btnDiv.appendChild(BtnCreate);
         BtnCreate.addEventListener('click', () =>{
             if(addInput.value !== ''){
+                taskArray.tasks.forEach(element => {
+                    console.log(`${element.number} || ${number[number.length-1]}`)
+                    if(element.number == number[number.length-1]){
+                        element.array.push(addInput.value);
+                    }
+                });
+
                 toDoCreate(addInput.value)
                 inputDiv.remove();
                 addTask.classList.toggle('clicked');
+                console.log(taskArray);
             }
 
         })
@@ -50,6 +63,8 @@ const addTask = () =>{
             inputDiv.remove();
             addTask.classList.toggle('clicked');
         })
+
+    }
 
     })
 
@@ -74,5 +89,11 @@ const toDoCreate = (text) =>{
 
 }
 
-export default addTask;
+
+
+
+
+
+
+export default makeTask;
 

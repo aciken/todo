@@ -1,8 +1,8 @@
-import addTask from "./addTask";
+import mainChange from "./mainChange";
 
 
 const main = () =>{
-    addTask();
+    mainChange()
 }
 
 

@@ -19,7 +19,7 @@ const navFunc = () => {
     })
 
     addProject(listDiv);
-    mainChange();
+
 
 }
 
