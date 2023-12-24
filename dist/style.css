@@ -179,6 +179,11 @@ svg.plus-icon{
     transition: .5s;
 }
 
+
+.input-todo{
+    padding: 12px 0;
+}
+
 .add-task:hover{
     scale: 102%;
     background-color: #f1f5f9;
@@ -195,6 +200,57 @@ svg.plus-icon{
     height: auto;
 }
 
+
+.task-create{
+    cursor: pointer;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: #22c55e;
+}
+
+.task-cancle{
+    cursor: pointer;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: #f43f5e;
+}
+
+.task-input{
+    display: inline-block;
+    padding: 0 16px 0 12px;
+    width: 80%;
+    line-height: 30px;
+    height: 32px;
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+    background-color: #fff;
+    color: rgb(8, 7, 7);
+    transition: border .1s linear,background-color .1s linear;
+    margin: 10px 0;
+}
+
+.task-btn{
+    display: flex;
+    gap: 5px;
+}
+
+.tasks-show {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.tasks-show svg{
+    width: 20px;
+    height: auto;
+}
+
+.one-task{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
 
 
 
