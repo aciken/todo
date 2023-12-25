@@ -1,4 +1,5 @@
 import { taskArray } from "./createTask";
+import oneTaskCreate from "./oneTaskCreate";
 
 const makeTask = (number) =>{
 
@@ -41,10 +42,11 @@ const makeTask = (number) =>{
                     console.log(`${element.number} || ${number[number.length-1]}`)
                     if(element.number == number[number.length-1]){
                         element.array.push(addInput.value);
+                        oneTaskCreate(element.array)
                     }
                 });
 
-                toDoCreate(addInput.value)
+
                 inputDiv.remove();
                 addTask.classList.toggle('clicked');
                 console.log(taskArray);
@@ -71,23 +73,23 @@ const makeTask = (number) =>{
 
 }
 
-const toDoCreate = (text) =>{
-    const taskShow = document.querySelector('.tasks-show');
+// const toDoCreate = (text) =>{
+//     const taskShow = document.querySelector('.tasks-show');
 
-    const taskDiv = document.createElement('div');
-    taskDiv.classList.add('one-task');
-    taskShow.appendChild(taskDiv);
+//     const taskDiv = document.createElement('div');
+//     taskDiv.classList.add('one-task');
+//     taskShow.appendChild(taskDiv);
 
 
 
-    const svgString = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>circle-outline</title><path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>';
-    taskDiv.innerHTML = svgString;
+//     const svgString = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>circle-outline</title><path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>';
+//     taskDiv.innerHTML = svgString;
 
-    const taskText = document.createElement('p');
-    taskText.textContent = text;
-    taskDiv.appendChild(taskText);
+//     const taskText = document.createElement('p');
+//     taskText.textContent = text;
+//     taskDiv.appendChild(taskText);
 
-}
+// }
 
 
 
