@@ -11,8 +11,9 @@ const makeTask = (number) =>{
     
 
     addTask.addEventListener('click', () =>{
-
+        console.log(number[number.length])
         if(addPart.childElementCount < 2){
+            console.log(number)
             console.log(number[number.length-1])
         
 
@@ -21,8 +22,8 @@ const makeTask = (number) =>{
         const inputDiv = document.createElement('div');
         inputDiv.classList.add('input-todo');
         addPart.appendChild(inputDiv);
-    
-    
+
+
         const addInput = document.createElement('input');
         addInput.classList.add('task-input')
         inputDiv.appendChild(addInput);

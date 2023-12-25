@@ -1,7 +1,7 @@
 const oneTaskCreate = (array) =>{
 
 const taskShow = document.querySelector('.tasks-show');
-console.log(taskShow.childElementCount)
+console.log(array)
 
 
 if(taskShow.childElementCount > 0){
@@ -13,7 +13,7 @@ if(taskShow.childElementCount > 0){
 
 
 for(let i = 0; i < array.length; i++){
-    console.log(array[i])
+
     toDoCreate(array[i]);
 }
 
