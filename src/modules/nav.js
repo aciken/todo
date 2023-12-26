@@ -1,5 +1,5 @@
 import {taskDOM} from "./createTask";
-import mainChange from "./mainChange";
+import {mainChange} from "./mainChange";
 
 
 const navFunc = () => {

@@ -1,14 +1,20 @@
 import {taskArray } from "./createTask";
+import { arrayNum } from "./mainChange";
 
 const iconClick = (num) => {
     const taskShow = document.querySelector('.tasks-show');
 
+
+
     taskShow.addEventListener('click', (e) =>{
-        console.log(num);
-        if( taskArray.tasks[num].state[e.target.parentElement.dataset.index] === false){
-        taskArray.tasks[num].state[e.target.parentElement.dataset.index] = true;
+        console.log(e.target.parentElement.dataset.index)
+
+
+
+        if( taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[e.target.parentElement.dataset.index] === false){
+            taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[e.target.parentElement.dataset.index] = true;
         } else{
-            taskArray.tasks[num].state[e.target.parentElement.dataset.index] = false;
+            taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[e.target.parentElement.dataset.index] = false;
         }
     })
 

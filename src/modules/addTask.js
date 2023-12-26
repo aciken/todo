@@ -1,5 +1,6 @@
 import { taskArray } from "./createTask";
 import oneTaskCreate from "./oneTaskCreate";
+import iconClick from "./iconClick";
 
 const makeTask = (number) =>{
 
@@ -43,7 +44,7 @@ const makeTask = (number) =>{
                     if(element.number == number[number.length-1]){
                         element.array.push(addInput.value);
                         element.state.push(false);
-                        oneTaskCreate(element.array)
+                        oneTaskCreate(element.array, number[number.length-1])
                         console.log(element)
                     }
                 });

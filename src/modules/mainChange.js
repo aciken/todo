@@ -2,17 +2,25 @@ import { taskArray } from "./createTask";
 import makeTask from "./addTask";
 import oneTaskCreate from "./oneTaskCreate";
 
+
+const arrayNum = (function(){
+    let taskNum = ['1'];
+
+    return{taskNum}
+})();
+
+
 const mainChange = () => {
 
     const tasks = document.querySelectorAll('.tasks');
     const mainNum = document.querySelector('.main-num');
 
-    let taskNum = ['1'];
 
 
 
-        makeTask(taskNum);
-    oneTaskCreate(taskArray.tasks[0].array)
+
+        makeTask(arrayNum.taskNum);
+    oneTaskCreate(taskArray.tasks[0].array, arrayNum.taskNum[length-1])
     
 
 
@@ -20,15 +28,15 @@ const mainChange = () => {
     tasks.forEach(task =>{
         task.addEventListener('click', (e) =>{
             if(e.target.dataset.index > 0){
-            taskNum.push(e.target.dataset.index);
+            arrayNum.taskNum.push(e.target.dataset.index);
 
 
 
             }
 
-            makeTask(taskNum)
+            makeTask(arrayNum.taskNum)
 
-            oneTaskCreate(taskArray.tasks[e.target.dataset.index-1].array)
+            oneTaskCreate(taskArray.tasks[e.target.dataset.index-1].array, arrayNum.taskNum[length-1])
 
         })
 
@@ -41,4 +49,4 @@ const mainChange = () => {
 
 
 
-export default mainChange;
+export {mainChange, arrayNum}
