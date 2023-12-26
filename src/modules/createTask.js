@@ -1,8 +1,9 @@
 function createTask (name, number) {
 
-    const array = []
+    const array = [];
+    let state = [];
     
-    return {name, number,array}
+    return {name, number, array, state}
 }
 
 
