@@ -246,11 +246,29 @@ svg.plus-icon{
 }
 
 .one-task{
+    width: 500px;
+    background-color: #dbeafe;
+    border-radius: 15px;
     align-items: center;
-    justify-content: center;
+    padding: 10px;
+    justify-content:space-between;
     display: flex;
     cursor: pointer;
 }
+
+.circle-icon{
+
+    transform: .4s;
+}
+
+.circle-icon:hover{
+    scale: 105%;
+}
+
+.one-task.clicked{
+    text-decoration: line-through;
+}
+
 
 
 
