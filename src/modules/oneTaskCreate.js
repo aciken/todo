@@ -2,27 +2,65 @@ import iconClick from "./iconClick";
 
 const oneTaskCreate = (array) => {
     const taskShow = document.querySelector('.tasks-show');
+    const indexArray = [];
+    for(let i = 0; i < taskShow.childElementCount; i++){
+            if(taskShow.children[i].classList.value == 'one-task clicked'){
+                indexArray.push(i)
+            }
+        
+    }
+
+    console.log(indexArray)
+
+
+
 
     // Clear existing tasks
     taskShow.innerHTML = '';
 
     for (let i = 0; i < array.length; i++) {
-        toDoCreate(array[i], i);
+        toDoCreate(array[i], i, indexArray);
     }
 };
 
-const toDoCreate = (text, index) => {
+const toDoCreate = (text, index, array) => {
     const taskShow = document.querySelector('.tasks-show');
 
+
+
+    let state = false;
+
+    for(let i = 0; i<array.length;i++){
+        console.log(array[i])
+        if(array[i] == index){
+            state = true;
+            break;
+        }
+    }
+        
     const taskDiv = document.createElement('div');
-    taskDiv.classList.add('one-task');
-    taskShow.appendChild(taskDiv);
+    console.log(state)
+        if(state === true){
+
+            taskDiv.classList = 'one-task clicked';
+            taskShow.appendChild(taskDiv);
+
+            const svgString = '<svg class="circle-icon clicked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>circle</title><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>';
+            taskDiv.innerHTML = svgString;
+        } else {
+
+            taskDiv.classList.add('one-task');
+            taskShow.appendChild(taskDiv);
+
+            const svgString = '<svg class="circle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>circle-outline</title><path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>';
+            taskDiv.innerHTML = svgString;
+        }
+    
+
 
     taskDiv.dataset.index = index;
     console.log(taskDiv)
 
-    const svgString = '<svg class="circle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>circle-outline</title><path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>';
-    taskDiv.innerHTML = svgString;
 
     const taskText = document.createElement('p');
     taskText.textContent = text;
