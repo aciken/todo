@@ -8,37 +8,47 @@
 </head>
 <body>
 
-    <div class="all-grid">
-        <div class="top">
-            <h1>TODO-ER</h1>
-        </div>
-        <div class="left-nav">
 
-            
-            <div class="task-div">
-                <h1 class="task-click">Tasks</h1>
-                <svg class="svg-drop down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7,10L12,15L17,10H7Z" /></svg>
-                <svg class="svg-drop up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu-up</title><path d="M7,15L12,10L17,15H7Z" /></svg>
-            </div>
-            <ul class="todo-list">
-                <div class="tasks">
-                <li class="first-task" data-index="1">MyToDoList</li>
-                </div>
-                <li class="add-project">Add Task<svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z" /></svg></li>
-                
-            </ul>
-        </div>
-        <div class="main">
-            <div class="add-part">
-                <div class="add-task">
-                    <svg class="add-task-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>text-box-plus-outline</title><path d="M17,14H19V17H22V19H19V22H17V19H14V17H17V14M5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3M7,7H17V9H7V7M7,11H17V12.08C16.15,12.22 15.37,12.54 14.68,13H7V11M7,15H12V17H7V15Z" /></svg>
-                </div>
-            </div>
-            <div class="tasks-show">
 
+
+        <div class="all-grid">
+            <div class="top">
+                <h1>TODO-ER</h1>
+            </div>
+            <div class="left-nav">
+        
+                <div class="task-div">
+                    <h1 class="task-click">Tasks</h1>
+                    <svg class="svg-drop down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7,10L12,15L17,10H7Z" /></svg>
+                    <svg class="svg-drop up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu-up</title><path d="M7,15L12,10L17,15H7Z" /></svg>
+                </div>
+                <ul class="todo-list">
+                    <div class="tasks">
+                    <li class="first-task" data-index="1">MyToDoList</li>
+                    </div>
+                    <li class="add-project">Add Task<svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z" /></svg></li>
+        
+                </ul>
+            </div>
+            <div class="main">
+                <div class="edit-popup">
+                    <input class="edit-input" type="text">
+                    <div class="edit-buttons">
+                        <a class="edit-cancle" href="#">Cancle</a>
+                        <a class="edit-confirm" href="#">Edit</a>
+                    </div>
+                </div>
+        
+                <div class="add-part">
+                    <div class="add-task">
+                        <svg class="add-task-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>text-box-plus-outline</title><path d="M17,14H19V17H22V19H19V22H17V19H14V17H17V14M5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3M7,7H17V9H7V7M7,11H17V12.08C16.15,12.22 15.37,12.54 14.68,13H7V11M7,15H12V17H7V15Z" /></svg>
+                    </div>
+                </div>
+                <div class="tasks-show">
+                </div>
             </div>
         </div>
-    </div>
+
     
     <script src="main.js"></script>
 </body>
