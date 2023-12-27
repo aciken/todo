@@ -20,7 +20,7 @@ const mainChange = () => {
 
 
         makeTask(arrayNum.taskNum);
-    oneTaskCreate(taskArray.tasks[0].array, arrayNum.taskNum[length-1])
+    oneTaskCreate(taskArray.tasks[0].array, arrayNum.taskNum[length-1], taskArray.tasks[0].state)
     
 
 
@@ -29,14 +29,14 @@ const mainChange = () => {
         task.addEventListener('click', (e) =>{
             if(e.target.dataset.index > 0){
             arrayNum.taskNum.push(e.target.dataset.index);
-
-
-
             }
+
+            console.log(33)
 
             makeTask(arrayNum.taskNum)
 
-            oneTaskCreate(taskArray.tasks[e.target.dataset.index-1].array, arrayNum.taskNum[length-1])
+
+            oneTaskCreate(taskArray.tasks[e.target.dataset.index-1].array, arrayNum.taskNum[length-1], taskArray.tasks[e.target.dataset.index-1].state)
 
         })
 

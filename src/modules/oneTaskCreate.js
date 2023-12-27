@@ -1,6 +1,8 @@
 import iconClick from "./iconClick";
+import {taskArray } from "./createTask";
+import { arrayNum } from "./mainChange";
 
-const oneTaskCreate = (array, num) => {
+const oneTaskCreate = (array, num,state ) => {
     const taskShow = document.querySelector('.tasks-show');
 
 
@@ -10,27 +12,34 @@ const oneTaskCreate = (array, num) => {
 
     taskShow.innerHTML = '';
     for (let i = 0; i < array.length; i++) {
-        toDoCreate(array[i], i, num);
+        toDoCreate(array[i], i, state);
     }
-    console.log(1)
+
 
 };
 
-const toDoCreate = (text, index, num) => {
+const toDoCreate = (text, index, state) => {
 
     
     const taskShow = document.querySelector('.tasks-show');
+    const taskDiv = document.createElement('div');
 
-
- 
-        const taskDiv = document.createElement('div');
-            taskDiv.classList.add('one-task');
-            taskShow.appendChild(taskDiv);
-
-            const svgString = '<svg class="circle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>circle-outline</title><path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>';
-            taskDiv.innerHTML = svgString;
+console.log(`STATE INDEX:${state[index]}`)
+    if(state[index] == true){
+        console.log('crno')
+        taskDiv.classList = 'one-task clicked' ;
+        taskShow.appendChild(taskDiv);
         
-    
+        const svgString = '<svg class="circle-icon clicked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>circle</title><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>'
+        taskDiv.innerHTML = svgString;
+    } else {
+        console.log('nije crno')
+        taskDiv.classList = 'one-task' 
+        taskShow.appendChild(taskDiv);
+
+        const svgString = '<svg class="circle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>circle-outline</title><path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>';
+        taskDiv.innerHTML = svgString;
+    }
 
 
     taskDiv.dataset.index = index;

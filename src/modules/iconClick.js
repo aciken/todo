@@ -11,31 +11,38 @@ const iconClick = (num) => {
 
         const oneTask = document.querySelectorAll('.one-task')
 
-        if( taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[e.target.parentElement.dataset.index] === false){
+        console.log(`STANJE:${e.target.parentElement.parentElement.dataset.index}`)
+
+        if( taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[e.target.parentElement.dataset.index] == false){
+            console.log('UNAPRED')
             taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[e.target.parentElement.dataset.index] = true;
-        } else{
-            taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[e.target.parentElement.dataset.index] = false;
+            console.log(`IZMENJENO STANJE:${taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[e.target.parentElement.dataset.index]}`)
+        } else if(taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[e.target.parentElement.parentElement.dataset.index] == true){
+            console.log('UNAZAD')
+            taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[e.target.parentElement.parentElement.dataset.index] = false;
         }
 
+        console.log(taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state)
 
 
 
-        for(let i = 0; i < taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state.length; i++){
-            console.log(taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[i] == true)
-            if(taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[i] == true){
-                oneTask.forEach(task =>{
-                    if(task.dataset.index == i){
-                        task.classList = 'one-task clicked'
-                    } 
-                })
-            } else{
-                oneTask.forEach(task =>{
-                    if(task.dataset.index == i){
-                        task.classList = 'one-task'
-                    } 
-                })
-            }
-        }
+
+        // for(let i = 0; i < taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state.length; i++){
+        //     console.log(taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[i] == true)
+        //     if(taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[i] == true){
+        //         oneTask.forEach(task =>{
+        //             if(task.dataset.index == i){
+        //                 task.classList = 'one-task clicked'
+        //             } 
+        //         })
+        //     } else{
+        //         oneTask.forEach(task =>{
+        //             if(task.dataset.index == i){
+        //                 task.classList = 'one-task'
+        //             } 
+        //         })
+        //     }
+        // }
     })
 
 };
