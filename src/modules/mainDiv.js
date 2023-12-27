@@ -3,7 +3,7 @@ import iconClick from "./iconClick";
 
 const main = () =>{
     mainChange()
-    iconClick()
+    // iconClick()
 }
 
 

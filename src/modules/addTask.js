@@ -14,7 +14,6 @@ const makeTask = (number) =>{
     addTask.addEventListener('click', () =>{
 
         if(addPart.childElementCount < 2){
-
         
 
         addTask.classList.toggle('clicked');
@@ -44,6 +43,7 @@ const makeTask = (number) =>{
                     if(element.number == number[number.length-1]){
                         element.array.push(addInput.value);
                         element.state.push(false);
+                        iconClick();
                         oneTaskCreate(element.array, number[number.length-1])
                         console.log(element)
                     }
