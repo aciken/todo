@@ -1,5 +1,6 @@
 import {taskArray } from "./createTask";
 import { arrayNum } from "./mainChange";
+import oneTaskCreate from "./oneTaskCreate";
 
 const iconClick = (num) => {
     const taskShow = document.querySelector('.tasks-show');
@@ -21,6 +22,8 @@ const iconClick = (num) => {
             console.log('UNAZAD')
             taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state[e.target.parentElement.parentElement.dataset.index] = false;
         }
+
+        oneTaskCreate(taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].array, arrayNum.taskNum[arrayNum.taskNum.length-1]-1, taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state)
 
         console.log(taskArray.tasks[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].state)
 

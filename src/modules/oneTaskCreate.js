@@ -2,7 +2,7 @@ import iconClick from "./iconClick";
 import {taskArray } from "./createTask";
 import { arrayNum } from "./mainChange";
 
-const oneTaskCreate = (array, num,state ) => {
+const oneTaskCreate = (array ,num ,state ) => {
     const taskShow = document.querySelector('.tasks-show');
 
 
