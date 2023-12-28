@@ -14,7 +14,7 @@ const makeTask = (number) =>{
     addTask.addEventListener('click', () =>{
 
         if(addPart.childElementCount < 2){
-        
+
 
         addTask.classList.toggle('clicked');
 

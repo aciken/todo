@@ -54,13 +54,12 @@
 
 .todo-list{
     cursor: pointer;
-    display: none;
-
+    display: flex;
+    flex-direction: column;     
 }
 
 .todo-list.clicked{
-display: flex;
-flex-direction: column;    
+display: none;
 }
 
 ul li{
@@ -68,9 +67,35 @@ ul li{
     padding: 3px;
 }
 
-ul li:hover{
-    background-color: #dbeafe;
+.task-nav{
+    width: 85%;
+    border: 2px solid #000000;
     border-radius: 20px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: .5s;
+}
+
+.icon-wrapper{
+    transform: translateY(2px);
+    width: 15px;
+    height: auto;
+}
+
+.icon-wrapper:hover{
+    scale:110%;
+    border-color: #dddddd;
+}
+
+.task-nav:hover{
+    scale: 102%;
+}
+
+.task-nav.clicked{
+    background-color: #dbeafe;
 
 }
 
@@ -146,19 +171,19 @@ svg.plus-icon{
 }
 
 .up{
-    display: none;
+    display: block;
 }
 
 .down{
-    display: block;
+    display: none;
 }
 
 .up.clicked{
-    display: block;
+    display: none;
 }
 
 .down.clicked{
-    display: none;
+    display: block;
 }
 
 
