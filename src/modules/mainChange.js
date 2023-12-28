@@ -26,7 +26,7 @@ const mainChange = () => {
         makeTask(arrayNum.taskNum);
     oneTaskCreate(taskArray.tasks[0].array, arrayNum.taskNum[length-1], taskArray.tasks[0].state)
     taskNav[0].classList.add('clicked')
-deleteTaskNav()
+    deleteTaskNav()
 
 
 
@@ -44,9 +44,9 @@ deleteTaskNav()
 
 
             oneTaskCreate(taskArray.tasks[e.target.dataset.index-1].array, arrayNum.taskNum[length-1], taskArray.tasks[e.target.dataset.index-1].state)
-
-
-                selectedNav(e.target.dataset.index-1)
+                // console.log(`AAA ${taskNav[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].classList}`)
+                console.log(Array.from(e.target.parentNode.children).indexOf(e.target))
+                selectedNav(Array.from(e.target.parentNode.children).indexOf(e.target))
             
             }
 
@@ -58,20 +58,30 @@ deleteTaskNav()
 
 }
 
-    const selectedNav = () =>{
+    const selectedNav = (index) =>{
         const taskNav = document.querySelectorAll('.task-nav');
-        console.log(taskNav[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].classList)
+        // console.log(taskNav[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].classList)
 
-        taskNav[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].classList.add('clicked');
-        console.log(`${arrayNum.taskNum[arrayNum.taskNum.length-1]-1} || ${arrayNum.taskNum[arrayNum.taskNum.length-2]-1}`)
-        if(arrayNum.taskNum[arrayNum.taskNum.length-1]-1 == arrayNum.taskNum[arrayNum.taskNum.length-2]-1){
+        console.log(index)
+        taskNav.forEach(task =>{
+            task.classList = 'task-nav';
+        })
 
-        } else{
+        taskNav[index].classList = 'task-nav clicked';
+
+
+
+
+    //     taskNav[arrayNum.taskNum[arrayNum.taskNum.length-1]-1].classList.add('clicked');
+    //     console.log(`${arrayNum.taskNum[arrayNum.taskNum.length-1]-1} || ${arrayNum.taskNum[arrayNum.taskNum.length-2]-1}`)
+    //     if(arrayNum.taskNum[arrayNum.taskNum.length-1]-1 == arrayNum.taskNum[arrayNum.taskNum.length-2]-1){
+
+    //     } else{
    
-        if(arrayNum.taskNum.length > 1){
-            taskNav[arrayNum.taskNum[arrayNum.taskNum.length-2]-1].classList.remove('clicked')
-        }
-    }
+    //     if(arrayNum.taskNum.length > 1){
+    //         taskNav[arrayNum.taskNum[arrayNum.taskNum.length-2]-1].classList.remove('clicked')
+    //     }
+    // }
     }
 
 

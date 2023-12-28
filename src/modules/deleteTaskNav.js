@@ -1,4 +1,5 @@
 import { arrayNum } from "./mainChange";
+import oneTaskCreate from "./oneTaskCreate";
 
 const deleteTaskNav = () =>{
     const xIcon = document.querySelectorAll('.x-icon');
@@ -18,7 +19,7 @@ const deleteTaskNav = () =>{
                     }
 
                 e.target.parentElement.parentElement.remove()
-
+                    oneTaskCreate()
             }
 
             e.stopImmediatePropagation()
