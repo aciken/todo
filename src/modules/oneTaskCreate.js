@@ -1,6 +1,7 @@
 import {iconClick} from "./iconClick";
 import {taskArray } from "./createTask";
 import { arrayNum } from "./mainChange";
+import {setStorage} from "./storage";
 
 const oneTaskCreate = (array ,num ,state ) => {
     const taskShow = document.querySelector('.tasks-show');
@@ -19,8 +20,10 @@ const oneTaskCreate = (array ,num ,state ) => {
 };
 
 const toDoCreate = (text, index, state) => {
+    localStorage.setItem('tasks', JSON.stringify(taskArray.tasks));  
 
-    
+    setStorage()
+
     const taskShow = document.querySelector('.tasks-show');
     const taskDiv = document.createElement('div');
 
